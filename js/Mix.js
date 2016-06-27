@@ -19931,7 +19931,6 @@
         duration : Infinity
       },
     
-      console.log('0');
       initialize: function() {
         this.nodes = {};
         console.log('1');
