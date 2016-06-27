@@ -19414,7 +19414,7 @@
   
     // add an AudioContext
     App.ac = (function( w ) {
-      var Ac = w.AudioContext; //|| w.webkitAudioContext || w.mozAudioContext;
+      var Ac = w.AudioContext || w.webkitAudioContext || w.mozAudioContext;
       return new Ac();
     }(window));
   
@@ -19933,11 +19933,13 @@
   
       initialize: function() {
         this.nodes = {};
+        console.log('1');
         this.createNodes();
+        console.log('2');
         this.setValues();
-        console.log('hurr');
+        console.log('3');
         this.fetchAudio();
-        console.log('urr');
+        console.log('4');
         this.fftSize = 2048;
         this.timeData = new Uint8Array(this.fftSize);
         this.on('change:gain', this.setGain, this);
