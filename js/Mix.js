@@ -19669,11 +19669,11 @@
     // fetch and decode an audio asset, then pass the AudioBuffer
     // to the supplied callback
     util.fetchAudioAsset = function( path, callback ) {
+      console.log('here');
       var xhr = new XMLHttpRequest();
       xhr.open('GET', path, true);
       xhr.responseType = 'arraybuffer';
       xhr.addEventListener('load', function() {
-        console.log('here');
         App.ac.decodeAudioData(xhr.response, function( buffer ){
           callback(buffer);
         });
