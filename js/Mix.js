@@ -19930,7 +19930,8 @@
         // internally calculated track duration
         duration : Infinity
       },
-  
+    
+      console.log('0');
       initialize: function() {
         this.nodes = {};
         console.log('1');
@@ -19951,6 +19952,7 @@
   
       // create gain/pan/mute/solo nodes
       createNodes: function() {
+        console.log('nodes');
         // user mute
         this.nodes.mute = App.ac.createGain();
         // auto mute (caused by other tracks being soloed)
