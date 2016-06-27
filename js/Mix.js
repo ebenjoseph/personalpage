@@ -19414,8 +19414,8 @@
   
     // add an AudioContext
     App.ac = (function( w ) {
-      var Ac = w.AudioContext || w.webkitAudioContext || w.mozAudioContext;
-      return new AudioContext(); //Ac();
+      var Ac = w.AudioContext; //|| w.webkitAudioContext || w.mozAudioContext;
+      return new Ac();
     }(window));
   
     // wait for all tracks to be loaded
