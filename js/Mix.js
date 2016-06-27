@@ -19935,7 +19935,9 @@
         this.nodes = {};
         this.createNodes();
         this.setValues();
+        console.log('hurr');
         this.fetchAudio();
+        console.log('urr');
         this.fftSize = 2048;
         this.timeData = new Uint8Array(this.fftSize);
         this.on('change:gain', this.setGain, this);
